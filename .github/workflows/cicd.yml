@@ -2,7 +2,7 @@ name: Deploy Next.js site to Pages
 
 on:
   push:
-    branches: ["main", "5-deploy-to-gh-pages"]
+    branches: ["main"]
 
   # Allows to run this workflow manually from the Actions tab
   workflow_dispatch:
