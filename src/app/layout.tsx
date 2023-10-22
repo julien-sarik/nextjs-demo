@@ -21,9 +21,8 @@ export default function RootLayout({
         {/* root layout used accross the app */}
         <nav className="menu">
           <ul>
-            <li><Link href="#Accueil">Accueil</Link></li>
-            <li><Link href="/dashboard">dashboard</Link></li>
-            <li><Link href="#Contact">Contact</Link></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/data-fetching">data fetching</Link></li>
           </ul>
         </nav>
 
