@@ -1,4 +1,4 @@
-import Link from "next/link"
+import ActivableLink from "../(client-components)/activableLink"
 
 export default function DataFetchingLayout({
     children, // will be a page or nested layout
@@ -9,8 +9,8 @@ export default function DataFetchingLayout({
       <section>
         {/* <!-- The sidebar --> */}
         <div className="sidebar">
-          <Link className="active" href="/data-fetching/client-side">client component</Link>
-          <Link href="/data-fetching/server-side">server component</Link>
+          <ActivableLink href="/data-fetching/client-side" content="client component"></ActivableLink>
+          <ActivableLink href="/data-fetching/server-side" content="server component"></ActivableLink>
         </div>
    
         {children}
