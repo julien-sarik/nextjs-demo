@@ -25,3 +25,8 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+a {
+  color: #00c4fa;
+  text-decoration: underline;
+}
