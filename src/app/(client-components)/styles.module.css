@@ -1,0 +1,8 @@
+.quote {
+  font-style: italic;
+}
+
+.active {
+  background-color: #333;
+  color: white !important;
+}

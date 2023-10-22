@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
+import styles from './styles.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {/* root layout used accross the app */}
-        <nav className="menu">
+        <nav className={styles.menu}>
           <ul>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/data-fetching">data fetching</Link></li>
