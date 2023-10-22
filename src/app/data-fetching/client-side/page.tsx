@@ -1,4 +1,4 @@
-import Quote from "../../(quotes)/quote";
+import Quote from "../../(client-components)/quote";
 
 // `app/data-fetching/client-side/page.tsx` is the UI for the `/data-fetching/client-side` URL
 export default function Page() {
