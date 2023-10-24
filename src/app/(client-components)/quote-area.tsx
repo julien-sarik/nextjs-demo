@@ -1,19 +1,19 @@
 'use client'
 
 import Quote from "../(server-components)/quote";
-import { useContext } from 'react';
-import { QuoteContext } from "./quote-provider";
+import { useState } from 'react';
 
 export default function QuoteArea() {
+  const [quote, setQuote] = useState(sessionStorage.getItem('quote'));
 
   async function handleClick() {
     const quote: string = await generateQuote()
-    ctx.setCurrentQuote(quote)
+    sessionStorage.setItem('quote', quote)
+    setQuote(quote)
   }
 
-  const ctx = useContext(QuoteContext)
   return <>
-    <Quote quote={ctx.currentQuote}></Quote>
+    <Quote quote={quote}></Quote>
     <button onClick={handleClick}>Generate new quote</button>
   </>
 }

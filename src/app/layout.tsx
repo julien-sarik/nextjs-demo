@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
 import styles from './styles.module.css'
-import QuoteProvider from './(client-components)/quote-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,7 +27,7 @@ export default function RootLayout({
           </ul>
         </nav>
 
-        <QuoteProvider>{children}</QuoteProvider>
+        {children}
       </body>
     </html>
   )
