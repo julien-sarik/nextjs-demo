@@ -2,7 +2,7 @@ name: Deploy Next.js site to Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "21-fix-404-when-loading-home-page"]
 
   # Allows to run this workflow manually from the Actions tab
   workflow_dispatch:

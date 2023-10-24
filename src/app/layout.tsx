@@ -28,7 +28,8 @@ export default function RootLayout({
           </ul>
         </nav>
 
-        <QuoteProvider>{children}</QuoteProvider>
+        {/* <QuoteProvider>{children}</QuoteProvider> */}
+        {children}
       </body>
     </html>
   )
