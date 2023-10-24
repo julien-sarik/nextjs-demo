@@ -36,6 +36,7 @@ button {
   color: white;
   padding: 6px 28px;
   border-radius: 12px;
+  transition-duration: 0.4s;
 }
 
 /* Change the button color on hover */
