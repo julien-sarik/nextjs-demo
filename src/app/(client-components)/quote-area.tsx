@@ -4,7 +4,8 @@ import Quote from "../(server-components)/quote";
 import { useState } from 'react';
 
 export default function QuoteArea() {
-  const [quote, setQuote] = useState(sessionStorage.getItem('quote'));
+  // test if sessionStorage is defined to avoid crashing during static export
+  const [quote, setQuote] = useState(typeof sessionStorage !== 'undefined'? sessionStorage.getItem('quote'): null);
 
   async function handleClick() {
     const quote: string = await generateQuote()
