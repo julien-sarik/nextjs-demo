@@ -18,7 +18,7 @@
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
+/* Change the link color on hover */
 .menu li a:hover {
   background-color: #61dafb;
   color: black;
