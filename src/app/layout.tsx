@@ -24,6 +24,7 @@ export default function RootLayout({
           <ul>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/data-fetching">data fetching</Link></li>
+            <li><Link href="/hooks">hooks</Link></li>
           </ul>
         </nav>
 
