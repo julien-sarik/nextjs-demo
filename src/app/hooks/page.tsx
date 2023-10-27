@@ -1,7 +1,7 @@
-import VideoPanel from "../(client-components)/video-panel";
-
 export default function Page() {
     return <>
-      <VideoPanel src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"/>    
+      <div>
+        This tab describes the usage of some React hooks.
+      </div>
     </>
 }
