@@ -7,7 +7,6 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('has title', async ({ page }) => {
-  console.log(page.url())
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Create Next App/);
 });
