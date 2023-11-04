@@ -1,7 +1,9 @@
 import { test, expect } from '@playwright/test';
 
+const baseURL = process.env.BASE_URL ?? 'http://host.containers.internal:3000'
+
 test.beforeEach(async ({ page }) => {
-  await page.goto('/');
+  await page.goto(baseURL);
 });
 
 test('has title', async ({ page }) => {

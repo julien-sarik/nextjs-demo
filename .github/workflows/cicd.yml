@@ -85,15 +85,16 @@ jobs:
         uses: actions/deploy-pages@v1
 
   e2e:
-    timeout-minutes: 60
+    timeout-minutes: 25
     runs-on: ubuntu-latest
-    container: 
-      image: mcr.microsoft.com/playwright:v1.39.0-jammy
-      env:
-        BASE_URL: https://julien-sarik.github.io/nextjs-demo/
     needs: deploy
+    env:
+      BASE_URL: https://julien-sarik.github.io/nextjs-demo/
     steps:
     - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 20
     - name: Install dependencies
       run: npm ci
     - name: Install Playwright Browsers
