@@ -1,9 +1,7 @@
 import { test, expect } from '@playwright/test';
 
-const baseUrl = 'http://host.containers.internal:3000'
-
 test.beforeEach(async ({ page }) => {
-  await page.goto(baseUrl);
+  await page.goto('/');
 });
 
 test('has title', async ({ page }) => {
