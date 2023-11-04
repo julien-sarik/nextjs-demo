@@ -23,6 +23,25 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+### end to end tests
+End to end tests are installed and configured through Playwright:
+```
+npm init playwright@latest
+```
+Tests files are in the `e2e/` folder. Playwright configuration file is `/playwright.config.ts`.
+#### run tests
+Tests are performed against the URL defined by the `BASE_URL` environment variable. If the variable is not defined then `http://host.containers.internal:3000` is used which is resolved to the host running a podman container.
+##### UI mode
+To run the tests in UI mode:
+```
+podman run --rm -it -p 8080:8080 -w /nextjs-demo -v ${PWD}:/nextjs-demo mcr.microsoft.com/playwright:v1.39.0-jammy npx playwright test --ui-host=0.0.0.0 --ui-port=8080
+```
+##### headless mode
+To run the tests without opening a browser:
+```
+podman run --rm -it -p 8080:8080 -w /nextjs-demo -v ${PWD}:/nextjs-demo mcr.microsoft.com/playwright:v1.39.0-jammy npx playwright test
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
