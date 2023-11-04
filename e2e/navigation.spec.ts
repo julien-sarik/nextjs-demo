@@ -13,7 +13,7 @@ test('has title', async ({ page }) => {
 
 test.describe('top menu', () => {
     test('home', async ({ page }) => {
-        // Click the 'data fetching' link.
+        // Click the 'home' link.
         await page.getByRole('link', { name: 'home' }).click()
       
         // Expects page to have a specific text
